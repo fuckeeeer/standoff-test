@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>НАСКОЛЬКО ТЫ СТАНДОВЧИК? — максимально научный тест</title>
+<meta name="description" content="10 вопросов, 0 научности и 7500 часов чужого опыта. Узнай, кто ты: про, тикток-фраггер, скин-инвестор или токсик-легенда." />
+<meta name="theme-color" content="#0b0714" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:title" content="НАСКОЛЬКО ТЫ СТАНДОВЧИК?" />
+<meta property="og:description" content="10 вопросов, 0 научности и 7500 часов чужого опыта. Узнай свой приговор." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="НАСКОЛЬКО ТЫ СТАНДОВЧИК?" />
+<meta name="twitter:description" content="Максимально научный тест. Ответы не сохраняются. Твой MMR — да." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%AB%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-screen="loader">
+
+<noscript>
+  <div class="noscript">⚠️ Без JavaScript тест не работает. Как и твой скилл. Включи JS и возвращайся.</div>
+</noscript>
+
+<div class="bg-emojis" id="bgEmojis" aria-hidden="true"></div>
+
+<!-- ЗАГРУЗКА -->
+<div class="loader" id="loader">
+  <div class="loader-box">
+    <div class="loader-logo">🔫</div>
+
+    <div class="loader-main" id="loaderMain">
+      <h2 class="loader-title">ЗАГРУЖАЕМ СТАНДОВФФ</h2>
+      <p class="loader-msg" id="loaderMsg">Подключаемся к серверам... (они в Твери)</p>
+      <div class="loader-track"><div class="loader-fill" id="loaderFill"></div></div>
+      <div class="loader-meta">
+        <span id="loaderPct">0%</span>
+        <button class="link-btn" id="loaderSkip" type="button">пропустить (ты уже опоздал)</button>
+      </div>
+    </div>
+
+    <div class="captcha is-hidden" id="captcha">
+      <h3 class="captcha-title">ПРОВЕРКА НА БОТА</h3>
+      <p class="captcha-sub">Выберите все клетки, где сидит кемпер.</p>
+      <div class="captcha-grid" id="captchaGrid"></div>
+      <p class="captcha-hint">Подсказка: кемпер везде.</p>
+      <button class="btn btn-primary" id="captchaBtn" type="button">ПОДТВЕРДИТЬ</button>
+    </div>
+  </div>
+</div>
+
+<!-- ШАПКА -->
+<header class="site-head">
+  <a class="logo" href="#" id="logo" title="Нажми 5 раз. Ну давай.">
+    <span class="logo-mark">🔫</span>
+    <span class="logo-text">STANDOFF<span class="logo-accent">ТЕСТ</span></span>
+    <span class="logo-beta">beta 2018</span>
+  </a>
+  <nav class="site-nav" aria-label="Меню">
+    <button type="button" data-joke="Гайды вышли. Все. Сразу. В 2019.">ГАЙДЫ</button>
+    <button type="button" data-joke="Скины не продаём. Только показываем. 40 минут.">СКИНЫ</button>
+    <button type="button" class="nav-veli" data-joke="Вели занят. Он всегда занят.">ВЕЛИ</button>
+    <button type="button" data-joke="Раздел в разработке с 2018 года. Как и твой скилл.">ПРО</button>
+  </nav>
+  <button class="sound-btn" id="soundBtn" type="button" aria-pressed="true" title="Звук">🔊</button>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>🔥 СЕГОДНЯ В ТЕСТЕ: ВЕЛИ ОДОБРЯЕТ</span>
+    <span>📱 ТИКТОК ЗАБЛОКИРОВАН В 12 СТРАНАХ</span>
+    <span>🤖 ТВОЙ ТИММЕЙТ СНОВА БОТ</span>
+    <span>🔪 НОЖ ВЫПАЛ КОМУ-ТО ДРУГОМУ</span>
+    <span>📊 СРЕДНИЙ MMR ПО САЙТУ: 4 200 (ВРЁМ)</span>
+    <span>🍪 ПЕЧЕНЕК СЪЕДЕНО: 148 921</span>
+    <span>🔥 СЕГОДНЯ В ТЕСТЕ: ВЕЛИ ОДОБРЯЕТ</span>
+    <span>📱 ТИКТОК ЗАБЛОКИРОВАН В 12 СТРАНАХ</span>
+    <span>🤖 ТВОЙ ТИММЕЙТ СНОВА БОТ</span>
+    <span>🔪 НОЖ ВЫПАЛ КОМУ-ТО ДРУГОМУ</span>
+    <span>📊 СРЕДНИЙ MMR ПО САЙТУ: 4 200 (ВРЁМ)</span>
+    <span>🍪 ПЕЧЕНЕК СЪЕДЕНО: 148 921</span>
+  </div>
+</div>
+
+<main>
+
+  <!-- ИНТРО -->
+  <section class="screen hero" id="screen-intro">
+    <div class="hero-sticker s1" aria-hidden="true">POV: ты про</div>
+    <div class="hero-sticker s2" aria-hidden="true">1 ХП</div>
+    <div class="hero-sticker s3" aria-hidden="true">НЕ КЕМПЕР</div>
+    <div class="hero-sticker s4" aria-hidden="true">7500 ЧАСОВ</div>
+    <div class="hero-sticker s5" aria-hidden="true">ГГ ИЗИ</div>
+    <div class="hero-sticker s6" aria-hidden="true">+3 СКИЛЛА</div>
+
+    <div class="hero-badges">
+      <span class="pill pill-lime">100% НАУЧНО</span>
+      <span class="pill pill-pink">0% ПРАВДЫ</span>
+      <span class="pill pill-cyan">ОДОБРЕНО ТИКТОКОМ</span>
+    </div>
+
+    <h1 class="hero-title">
+      НАСКОЛЬКО ТЫ<br />
+      <span class="hl glitch" data-text="СТАНДОВЧИК?">СТАНДОВЧИК?</span>
+    </h1>
+
+    <p class="hero-sub">
+      10 вопросов, которые не изменят твою жизнь, но изменят твоё ЧСВ.
+      Отвечай честно. Или соври — <b>мы всё равно узнаем</b>.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn btn-primary btn-huge" id="btnStart" type="button">
+        ПРОЙТИ ТЕСТ <span class="btn-arrow">→</span>
+      </button>
+      <button class="btn btn-ghost" id="btnRandom" type="button">🎲 Случайный приговор</button>
+      <button class="btn btn-ghost" id="btnHow" type="button">📖 Как это работает</button>
+    </div>
+
+    <p class="hero-fine">Бесплатно · Без регистрации · Без шансов · Результат не лечит</p>
+
+    <div class="hero-stats">
+      <div><b id="passedCount">148 921</b><span>уже прошли</span></div>
+      <div><b id="onlineCount">2 281</b><span>онлайн (врём)</span></div>
+      <div><b>4 200</b><span>средний MMR</span></div>
+      <div><b id="attemptsCount">0</b><span>твои попытки</span></div>
+    </div>
+
+    <div class="reviews">
+      <article class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>«Я прошёл тест и узнал, что я токсик. Я не согласен. Вы все боты.»</p>
+        <span>— Тиммейт_228, золото 2</span>
+      </article>
+      <article class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>«Сайт лучше, чем моя игра. А игра у меня, мягко говоря, не очень.»</p>
+        <span>— Скин_Инвестор, 4 ножа</span>
+      </article>
+      <article class="review">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>«Думал, тут тест про стандофф. А тут тест про меня. 10/10.»</p>
+        <span>— Вели_фан_2011, в комментариях</span>
+      </article>
+    </div>
+    <p class="reviews-fine">* все отзывы выдуманы, как и твой ранг. звёзды тоже выдуманы.</p>
+
+    <div class="faq">
+      <details>
+        <summary>Это официальный тест?</summary>
+        <p>Нет. Официальный был бы с донатом и батлпассом. Этот — с любовью и печеньками.</p>
+      </details>
+      <details>
+        <summary>Почему так много Вели?</summary>
+        <p>Потому что ты сам его сюда принёс. Мы только оформили и добавили тикток.</p>
+      </details>
+      <details>
+        <summary>Мой результат обидный.</summary>
+        <p>Это не баг, это фича. И вообще, ты сам выбрал. Мы только записали.</p>
+      </details>
+      <details>
+        <summary>Тут есть читы?</summary>
+        <p>Нет. Но есть кнопка «Ещё раз» — считается.</p>
+      </details>
+      <details>
+        <summary>Кто вы вообще?</summary>
+        <p>Сайт, собранный на честном слове, тиктоке и 7500 часах чужих фейлов. С реальностью не связан.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ТЕСТ -->
+  <section class="screen" id="screen-quiz">
+    <div class="quiz-head">
+      <button class="ghost-link" id="btnQuit" type="button">← Выйти (ты слабак?)</button>
+      <div class="quiz-counter"><b id="qNow">1</b> / <span id="qTotal">10</span></div>
+    </div>
+
+    <div class="progress" role="progressbar" aria-label="Прогресс теста" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="quiz-card">
+      <div class="quiz-tag" id="qTag">ВОПРОС ПРО ЖИЗНЬ</div>
+      <h2 class="quiz-question" id="qText">Загрузка вопроса...</h2>
+      <div class="quiz-options" id="qOptions"></div>
+      <div class="quiz-reaction" id="qReaction" aria-live="polite"></div>
+    </div>
+
+    <p class="quiz-foot">Отвечай честно. Мы всё равно всё знаем. <span class="blink">●</span> записываем</p>
+  </section>
+
+  <!-- РЕЗУЛЬТАТ -->
+  <section class="screen" id="screen-result">
+    <article class="result-card" id="resultCard">
+      <div class="result-top">
+        <div class="avatar" id="resEmoji">👑</div>
+        <div class="result-headline">
+          <div class="result-label">ТВОЙ ПРИГОВОР</div>
+          <h2 id="resTitle">ВЕЛИ-МЛАДШИЙ</h2>
+          <p id="resTagline"></p>
+        </div>
+      </div>
+
+      <p id="resText"></p>
+
+      <div class="mmr-block">
+        <div class="mmr-label">ТВОЙ MMR (ПО ВЕРСИИ НАШЕЙ СОВЕСТИ)</div>
+        <div class="mmr-value" id="resMmr">0</div>
+        <div class="mmr-rank" id="resRank"></div>
+      </div>
+
+      <div class="stats" id="resStats"></div>
+      <div class="badges" id="resBadges"></div>
+
+      <blockquote class="result-quote" id="resQuote"></blockquote>
+
+      <div class="result-actions">
+        <button class="btn btn-primary" id="btnShare" type="button">📤 Поделиться позором</button>
+        <button class="btn btn-ghost" id="btnAgain" type="button">🔁 Ещё раз (вдруг)</button>
+      </div>
+
+      <p class="result-fine" id="resFine"></p>
+    </article>
+
+    <aside class="ad-card">
+      <div>
+        <div class="ad-label">РЕКЛАМА · НЕ НАША · НО НАМ ЗА НЕЁ ДАЛИ ПЕЧЕНЬКУ</div>
+        <p><b>ХОЧЕШЬ СТАТЬ ПРО?</b> Курс «Как нажимать на кнопки» от человека, который один раз видел Вели в лобби. 9 999 ₽. Первый урок: «Купи скин».</p>
+      </div>
+      <button class="btn btn-ghost" type="button" data-joke="Оплата отклонена. Причина: ты бот.">КУПИТЬ</button>
+    </aside>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="foot-row">
+    <div class="foot-brand"><b>STANDOFF ТЕСТ</b> — пародийный сайт. Мы никого не хейтим, мы всех любим. Даже тебя.</div>
+    <div class="foot-links">
+      <button type="button" id="btnPrivacy">Политика конфиденциальности</button>
+      <button type="button" data-joke="© 2026. Все права залутанены.">© 2026</button>
+      <button type="button" id="btnAbout">О сайте</button>
+    </div>
+  </div>
+  <p class="foot-fine">
+    Не связан с Axlebolt, Standoff 2, Вели, ТикТоком и реальностью. Все совпадения случайны.
+    Ножи не настоящие. MMR выдуманный. Ты — молодец.
+  </p>
+</footer>
+
+<!-- ЧАТ -->
+<div class="chat" id="chat">
+  <button class="chat-toggle" id="chatToggle" type="button">💬 <span class="chat-label">ЧАТ</span> <span class="chat-dot" id="chatDot"></span></button>
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-head">
+      <span>ЛОББИ-ЧАТ</span>
+      <button class="chat-close" id="chatClose" type="button" aria-label="Закрыть чат">✕</button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" type="text" maxlength="80" placeholder="Написать (только для избранных)" autocomplete="off" />
+      <button type="submit" aria-label="Отправить">➤</button>
+    </form>
+  </div>
+</div>
+
+<!-- ПЕЧЕНЬКИ -->
+<div class="cookie" id="cookie" role="dialog" aria-label="Печеньки">
+  <div class="cookie-emoji">🍪</div>
+  <div>
+    <p><b>Мы используем печеньки.</b> 731 штука. Без них тест не работает, и ты это знаешь.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-primary" id="cookieYes" type="button">ПРИНЯТЬ ВСЁ</button>
+      <button class="btn btn-ghost" id="cookieAlso" type="button">Только печеньки</button>
+    </div>
+  </div>
+</div>
+
+<!-- МОДАЛКА -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-x" id="modalX" type="button" aria-label="Закрыть">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
