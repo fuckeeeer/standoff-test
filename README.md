@@ -29,9 +29,11 @@
 
 ## Демо-ссылки
 
-- `index.html#intro` — сразу интро.
-- `index.html#quiz` — сразу тест.
-- `index.html#result` — случайный приговор без прохождения.
+- https://fuckeeeer.github.io/standoff-test/#intro — сразу интро.
+- https://fuckeeeer.github.io/standoff-test/#quiz — сразу тест.
+- https://fuckeeeer.github.io/standoff-test/#result — случайный приговор без прохождения.
+
+Локально те же хеши работают в `index.html`: `index.html#intro`, `index.html#quiz`, `index.html#result`.
 
 ## Дисклеймер
 
